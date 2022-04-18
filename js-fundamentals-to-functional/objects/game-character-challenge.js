@@ -45,10 +45,10 @@ game["suspects"].forEach((suspect, index) => {
     game["suspects"][index].isGuilty = false
   }
 })
+
 // Assign variable names to suspects
 const suspects = game["suspects"]
 const [suspect1, suspect2] = suspects
-//const [color1, color2] = game["suspects"].color
 console.log(suspect1) // { name: 'Rusty', color: 'orange', isGuilty: true }
 console.log(suspect2) // { name: 'Miss Scarlet', color: 'red', isGuilty: false }
 
