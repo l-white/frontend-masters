@@ -44,5 +44,8 @@ game["suspects"].forEach((suspect, index) => {
   } else {
     game["suspects"][index].isGuilty = false
   }
-  console.log(suspect)
 })
+
+const [suspect1, suspect2] = game["suspects"]
+console.log(suspect1)
+console.log(suspect2)
