@@ -11,12 +11,9 @@ function filterWithLoop(list, callback){
 
 const numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function greaterThanFive(num){
-  if (num > 5){
-    return true;
-  } else {
-    return false;
-  }
+  // if number in list is greater than five, return true, else return false
+  return num > 5 ? true : false;
 }
 
 filterWithLoop(numList, greaterThanFive);
-console.log(newList);
+console.log(newList); // [6, 7, 8, 9, 10]
