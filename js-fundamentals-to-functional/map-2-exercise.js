@@ -37,4 +37,6 @@ function map(list, callback) {
     }
     return newList;
 }
-console.log(map(weapons, makeBroken));
+console.log(map([1, 2, 3,], function(val) {return val + 1})); // [2, 3, 4]
+console.log(map(weapons, makeBroken)); // [2, 3, 4, 'broken candlestick', 'broken lead pipe', 'broken revolver']
+
