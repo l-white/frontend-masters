@@ -16,15 +16,8 @@ The range of elements processed by map is set before the first call to callbackf
 const _ = {};
 
 const newList = [];
-const newObj = {};
 
 const weapons = ["candlestick", "lead pipe", "revolver"];
-
-const weaponsObj = {
-    weapon1: "candlestick",
-    weapon2: "lead pipe",
-    weapon3: "revolver"
-}
 
 const makeBroken = function(item){
     return `broken ${item}`
@@ -35,15 +28,13 @@ function map(list, callback) {
     // check to see if item is an array
     if (Array.isArray(list)){
         // loop through the list     
-        for (var i = 0; i < list.length; i++){
+        for (let i = 0; i < list.length; i++){
             // call the callback with a list item
             newList.push(callback(list[i], i, list));
         }
-    } /*else {
-        for (let key in list){
-            callback(list[key], key, list)
-       }
-    }*/
+    } else {
+        console.log("Not an array")
+    }
     return newList;
 }
 console.log(map(weapons, makeBroken));
